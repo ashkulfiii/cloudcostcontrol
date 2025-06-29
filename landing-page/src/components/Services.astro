@@ -323,11 +323,13 @@
 			grid-template-columns: repeat(2, 1fr);
 			gap: 20px;
 		}
-	}
-
-	@media (max-width: 768px) {
+	}	@media (max-width: 768px) {
 		.services {
-			padding: 80px 0;
+			padding: 80px 0 100px 0;
+		}
+
+		.container {
+			padding: 0 24px;
 		}
 
 		.section-header {
@@ -340,20 +342,20 @@
 
 		.section-header p {
 			font-size: 1.125rem;
-		}
-
-		.services-grid {
+		}		.services-grid {
 			grid-template-columns: 1fr;
-			gap: 20px;
+			gap: 80px;
 			margin-bottom: 60px;
 		}
 
 		.service-card {
 			padding: 28px 20px;
+			margin-bottom: 40px;
 		}
 
 		.custom-solutions {
-			padding: 40px 24px;
+			padding: 40px 24px 20px 24px;
+			margin-bottom: 40px;
 		}
 
 		.custom-solutions h3 {
@@ -362,6 +364,16 @@
 
 		.custom-solutions p {
 			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.container {
+			padding: 0 20px;
+		}
+
+		.custom-solutions {
+			padding: 40px 20px 20px 20px;
 		}
 	}
 </style>
