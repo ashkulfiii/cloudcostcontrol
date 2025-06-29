@@ -1,0 +1,378 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "C³ - Cloud Cost Control - Professional Azure cost optimization services specializing in cloud spend optimization, budgeting frameworks, and financial reporting for growing businesses." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- PWA Manifest -->
+		<link rel="manifest" href="/manifest.json" />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="Azure cost optimization, cloud cost control, Azure spending, cloud budget management, Azure cost analysis, cloud financial management, Azure cost reduction, cloud cost monitoring, Microsoft Azure costs, cloud cost savings" />
+		<meta name="author" content="C³ - Cloud Cost Control" />
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		<link rel="canonical" href="https://cloudcostcontrol.net/" />
+		
+		<!-- Business/Contact Info -->
+		<meta name="contact" content="contact@cloudcostcontrol.net" />
+		<meta name="coverage" content="Worldwide" />
+		<meta name="distribution" content="Global" />
+		<meta name="rating" content="General" />
+		<meta name="revisit-after" content="7 days" />
+		
+		<!-- Geo targeting -->
+		<meta name="geo.region" content="US" />
+		<meta name="geo.country" content="United States" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content="https://cloudcostcontrol.net/" />
+		<meta property="og:site_name" content="C³ - Cloud Cost Control" />
+		<meta property="og:image" content="https://cloudcostcontrol.net/og-image.svg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:type" content="image/svg+xml" />
+		<meta property="og:locale" content="en_US" />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="https://cloudcostcontrol.net/og-image.svg" />
+		<meta name="twitter:image:alt" content="C³ - Cloud Cost Control - Azure Cost Optimization Services" />
+		
+		<!-- Additional SEO -->
+		<meta name="theme-color" content="#667eea" />
+		<meta name="msapplication-TileColor" content="#667eea" />
+		<meta name="msapplication-config" content="/browserconfig.xml" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="apple-mobile-web-app-title" content="C³ - Cloud Cost Control" />
+		
+		<!-- Preconnect for performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+		
+		<!-- Fonts with optimized loading -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+		
+		<!-- Favicon alternatives for better browser support -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/favicon.svg" />
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "C³ - Cloud Cost Control",
+			"alternateName": "Cloud Cost Control",
+			"description": "Professional Azure cost optimization services specializing in cloud spend optimization, budgeting frameworks, and financial reporting.",
+			"url": "https://cloudcostcontrol.net",
+			"logo": "https://cloudcostcontrol.net/favicon.svg",
+			"image": "https://cloudcostcontrol.net/og-image.svg",
+			"email": "contact@cloudcostcontrol.net",
+			"foundingDate": "2024",
+			"address": {
+				"@type": "PostalAddress",
+				"addressCountry": "US"
+			},
+			"serviceType": [
+				"Azure Cost Optimization",
+				"Cloud Cost Control", 
+				"Cloud Budget Management",
+				"Azure Cost Analysis",
+				"Cloud Financial Management",
+				"Azure Spend Optimization"
+			],
+			"areaServed": [
+				{
+					"@type": "Country",
+					"name": "United States"
+				},
+				{
+					"@type": "Country", 
+					"name": "Canada"
+				},
+				"Worldwide"
+			],
+			"knowsAbout": [
+				"Microsoft Azure",
+				"Cloud Cost Management",
+				"Azure Pricing",
+				"Cloud Budgeting",
+				"Azure Reserved Instances",
+				"Azure Spot Instances",
+				"Cloud Cost Optimization"
+			],
+			"offers": [
+				{
+					"@type": "Service",
+					"name": "Complete Cost Assessment",
+					"description": "Full audit of Azure spending with detailed baseline establishment and optimization roadmap",
+					"price": "2500",
+					"priceCurrency": "USD",
+					"category": "Azure Cost Audit"
+				},
+				{
+					"@type": "Service", 
+					"name": "Monthly Reporting",
+					"description": "Detailed monthly reports with cost analysis, trend identification, and actionable recommendations",
+					"price": "800",
+					"priceCurrency": "USD",
+					"category": "Ongoing Cost Management"
+				},
+				{
+					"@type": "Service",
+					"name": "Custom Solutions",
+					"description": "Tailored cost optimization strategies for complex Azure environments",
+					"category": "Custom Consulting"
+				}
+			],
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.9",
+				"reviewCount": "47"
+			},
+			"potentialAction": {
+				"@type": "ContactAction",
+				"target": "https://cloudcostcontrol.net/#contact"
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<!-- Navigation Header -->
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<a href="/">
+						<strong>C³ - Cloud Cost Control</strong>
+					</a>
+				</div>
+				<div class="nav-menu">
+					<a href="/#services" class="nav-link">Services</a>
+					<a href="/blog" class="nav-link">Blog</a>
+					<a href="/#contact" class="nav-cta">Contact</a>
+				</div>
+				<div class="nav-mobile-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</nav>
+		
+		<slot />
+	</body>
+</html>
+
+<style>
+	html {
+		font-family: 'Inter', system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		min-height: 100vh;
+		line-height: 1.6;
+		color: #1f2937;
+		background-color: #ffffff;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+	
+	/* Navigation Styles */
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+		z-index: 1000;
+		padding: 0.75rem 0;
+	}
+	
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.nav-logo a {
+		color: #1f2937;
+		text-decoration: none;
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+	
+	.nav-menu {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+	}
+	
+	.nav-link {
+		color: #4b5563;
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+	
+	.nav-link:hover {
+		color: #2563eb;
+	}
+	
+	.nav-cta {
+		background: #2563eb;
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 0.5rem;
+		text-decoration: none;
+		font-weight: 600;
+		transition: background-color 0.2s ease;
+	}
+	
+	.nav-cta:hover {
+		background: #1d4ed8;
+	}
+	
+	.nav-mobile-toggle {
+		display: none;
+		flex-direction: column;
+		cursor: pointer;
+		gap: 3px;
+	}
+	
+	.nav-mobile-toggle span {
+		width: 25px;
+		height: 3px;
+		background: #4b5563;
+		transition: 0.3s;
+	}
+	
+	/* Mobile Navigation */
+	@media (max-width: 768px) {
+		.nav-menu {
+			display: none;
+		}
+		
+		.nav-mobile-toggle {
+			display: flex;
+		}
+	}
+	
+	/* Add top padding to body content to account for fixed navbar */
+	body {
+		padding-top: 80px;
+	}
+	
+	/* Global Button Styles */
+	.btn-primary, .btn-secondary {
+		padding: 16px 32px;
+		border-radius: 8px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		display: inline-block;
+		border: none;
+		cursor: pointer;
+		font-family: inherit;
+	}
+
+	.btn-primary {
+		background: #fbbf24;
+		color: #1f2937;
+	}
+
+	.btn-primary:hover {
+		background: #f59e0b;
+		transform: translateY(-2px);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: #2563eb;
+		border: 2px solid #2563eb;
+	}
+
+	.btn-secondary:hover {
+		background: #2563eb;
+		color: white;
+	}
+	
+	/* Global Container and Section Styles */
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+	
+	.section-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	
+	.section-header h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+	
+	.section-header p {
+		font-size: 1.125rem;
+		color: #6b7280;
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+	
+	/* Mobile responsiveness for global styles */
+	@media (max-width: 768px) {
+		.container {
+			padding: 0 1rem;
+		}
+		
+		.section-header h2 {
+			font-size: 2rem;
+		}
+		
+		.section-header p {
+			font-size: 1rem;
+		}
+		
+		.btn-primary, .btn-secondary {
+			padding: 12px 24px;
+			font-size: 0.9rem;
+		}
+	}
+</style>

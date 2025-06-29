@@ -1,0 +1,345 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Thank You - CloudCost Control" description="Thank you for your interest in our Azure cost optimization services. We'll be in touch soon to discuss your cloud cost reduction needs.">
+	<main class="thank-you-page">
+		<section class="thank-you-hero">
+			<div class="container">
+				<div class="thank-you-content">
+					<!-- Success Icon -->
+					<div class="success-icon">
+						<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="40" cy="40" r="40" fill="#10b981" opacity="0.1"/>
+							<circle cx="40" cy="40" r="30" fill="#10b981"/>
+							<path d="M28 40l8 8 16-16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+							<!-- Main Message -->
+					<h1>Thank You for Your Interest!</h1>
+					<p class="lead">
+						We've received your inquiry about Azure cost optimization. You can either schedule a consultation immediately using the button below, or our team will review your information and contact you within 24 hours.
+					</p>
+					
+					<!-- What Happens Next -->
+					<div class="next-steps">
+						<h2>What Happens Next?</h2>						<div class="steps-grid">
+							<div class="step">
+								<div class="step-number">1</div>
+								<h3>Consultation Call</h3>
+								<p>We'll schedule a 30-minute call to discuss your specific needs and gain access to your cost data</p>
+							</div>
+							<div class="step">
+								<div class="step-number">2</div>
+								<h3>Initial Review</h3>
+								<p>Our team reviews your current Azure setup and identifies cost optimization opportunities</p>
+							</div>
+							<div class="step">
+								<div class="step-number">3</div>
+								<h3>Custom Proposal</h3>
+								<p>Receive a tailored cost optimization strategy for your organization</p>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Contact Information -->
+					<div class="contact-info">
+						<h3>Need Immediate Assistance?</h3>
+						<p>Feel free to reach out directly:</p>						<div class="contact-details">
+							<a href="mailto:contact@cloudcostcontrol.net" class="contact-link">								<svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+									<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+									<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+								</svg>
+								contact@cloudcostcontrol.net
+							</a>
+						</div>
+					</div>					<div class="cta-section">
+						<p>Want to get started right away? Schedule your consultation now, or simply wait for us to reach out within 24 hours.</p>
+						<div class="cta-buttons">
+							<a href="https://cal.com/cloudcostcontrol" target="_blank" rel="noopener noreferrer" class="btn-primary">
+								<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8 2V6M16 2V6M3 10H21M5 4H19C20.1046 4 21 4.89543 21 6V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V6C3 4.89543 3.89543 4 5 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Schedule Your Free Assesment Now
+							</a>
+							<a href="/#services" class="btn-secondary">View Our Services</a>
+							<a href="/" class="btn-secondary">Back to Home</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	/* Reset any potential layout issues */
+	html, body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.thank-you-page {
+		min-height: 100vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem 0;
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		margin: 0;
+	}
+	
+	.thank-you-hero {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.container {
+		max-width: 800px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+	
+	.thank-you-content {
+		background: white;
+		border-radius: 20px;
+		padding: 3rem;
+		text-align: center;
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+	}
+	
+	.success-icon {
+		margin-bottom: 2rem;
+		display: flex;
+		justify-content: center;
+	}
+	
+	.thank-you-content h1 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #1f2937;
+		margin-bottom: 1rem;
+	}
+	
+	.lead {
+		font-size: 1.25rem;
+		color: #6b7280;
+		margin-bottom: 3rem;
+		line-height: 1.6;
+	}
+	
+	.next-steps {
+		margin-bottom: 3rem;
+		text-align: left;
+	}
+	
+	.next-steps h2 {
+		font-size: 1.75rem;
+		font-weight: 600;
+		color: #1f2937;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	
+	.steps-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+	
+	.step {
+		text-align: center;
+		padding: 1.5rem;
+		background: #f9fafb;
+		border-radius: 12px;
+		border: 1px solid #e5e7eb;
+	}
+	
+	.step-number {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		background: #667eea;
+		color: white;
+		border-radius: 50%;
+		font-weight: 600;
+		font-size: 1.125rem;
+		margin-bottom: 1rem;
+	}
+	
+	.step h3 {
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: #1f2937;
+		margin-bottom: 0.5rem;
+	}
+	
+	.step p {
+		color: #6b7280;
+		font-size: 0.875rem;
+		line-height: 1.5;
+	}
+	
+	.contact-info {
+		background: #f8fafc;
+		border-radius: 12px;
+		padding: 2rem;
+		margin-bottom: 2rem;
+	}
+	
+	.contact-info h3 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: #1f2937;
+		margin-bottom: 0.5rem;
+	}
+	
+	.contact-info > p {
+		color: #6b7280;
+		margin-bottom: 1rem;
+	}
+	
+	.contact-details {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		align-items: center;
+	}
+	
+	.contact-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: #667eea;
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+	
+	.contact-link:hover {
+		color: #4f46e5;
+	}
+	
+	.cta-section p {
+		color: #6b7280;
+		margin-bottom: 1.5rem;
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.btn-primary,
+	.btn-secondary {
+		display: inline-block;
+		padding: 0.75rem 2rem;
+		border-radius: 8px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+		.btn-primary {
+		background: #667eea;
+		color: white;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+	
+	.btn-primary:hover {
+		background: #5a67d8;
+		transform: translateY(-2px);
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: #667eea;
+		border-color: #667eea;
+	}
+	
+	.btn-secondary:hover {
+		background: #667eea;
+		color: white;
+		transform: translateY(-2px);
+	}
+	
+	/* Responsive Design */	@media (max-width: 768px) {
+		.thank-you-page {
+			padding: 1rem 0;
+		}
+		
+		.thank-you-content {
+			padding: 2rem;
+		}
+		
+		.thank-you-content h1 {
+			font-size: 2rem;
+		}
+		
+		.lead {
+			font-size: 1.125rem;
+		}
+		
+		.next-steps h2 {
+			font-size: 1.5rem;
+		}
+		
+		.steps-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.contact-details {
+			align-items: flex-start;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+			gap: 0.75rem;
+		}
+		
+		.btn-primary,
+		.btn-secondary {
+			width: 200px;
+			text-align: center;
+			justify-content: center;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.thank-you-page {
+			padding: 0.5rem 0;
+			min-height: 100vh;
+		}
+		
+		.container {
+			padding: 0 0.5rem;
+		}
+		
+		.thank-you-content {
+			padding: 1.5rem;
+		}
+		
+		.thank-you-content h1 {
+			font-size: 1.75rem;
+		}
+				.btn-primary,
+		.btn-secondary {
+			width: 100%;
+			max-width: 250px;
+		}
+	}
+</style>

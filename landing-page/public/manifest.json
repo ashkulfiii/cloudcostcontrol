@@ -1,0 +1,21 @@
+{
+  "name": "C³ - Cloud Cost Control - Azure Cost Optimization Services",
+  "short_name": "C³ - Cloud Cost Control",
+  "description": "Professional Azure cost optimization services specializing in cloud spend optimization, budgeting frameworks, and financial reporting.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "lang": "en-US",
+  "scope": "/"
+}

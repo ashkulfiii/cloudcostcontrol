@@ -1,0 +1,336 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const blogPosts = await getCollection('blog', ({ data }) => {
+  return !data.draft;
+});
+
+// Sort posts by publication date (newest first)
+const sortedPosts = blogPosts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+});
+---
+
+<Layout 
+  title="Azure Cost Optimization Blog | C³ - Cloud Cost Control"
+  description="Expert insights, strategies, and tips for optimizing your Azure cloud costs. Learn from real-world case studies and implementation guides."
+><div class="blog-index">
+    <div class="container">
+      <!-- Header -->
+      <div class="blog-header">
+        <nav class="blog-nav">
+          <a href="/" class="nav-link">← Back to Home</a>
+        </nav>
+        
+        <div class="section-header">
+          <h1>Azure Cost Optimization Blog</h1>
+          <p>Expert insights, proven strategies, and real-world case studies to help you reduce your Azure costs by 30-50% or more.</p>
+        </div>
+      </div>
+
+      <!-- Featured Post -->
+      {sortedPosts.length > 0 && (
+        <div class="featured-section">
+          <h2 class="section-title">Featured Article</h2>
+          <div class="featured-post">
+            <div class="post-content">
+              <div class="post-tags">
+                {sortedPosts[0].data.tags.slice(0, 3).map((tag) => (
+                  <span class="tag">#{tag}</span>
+                ))}
+              </div>
+              <h3 class="post-title">
+                <a href={`/blog/${sortedPosts[0].slug}`}>
+                  {sortedPosts[0].data.title}
+                </a>
+              </h3>
+              <p class="post-description">
+                {sortedPosts[0].data.description}
+              </p>
+              <div class="post-meta">
+                <span class="author">By {sortedPosts[0].data.author}</span>
+                <span class="date">
+                  {sortedPosts[0].data.pubDate.toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </span>
+                <a href={`/blog/${sortedPosts[0].slug}`} class="read-more">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          </div>        </div>
+      )}      <!-- All Posts Grid -->
+      <div class="posts-section">
+        <h2 class="section-title">All Articles</h2>
+        <div class="posts-grid">
+          {sortedPosts.slice(1).map((post) => (
+            <article class="post-card">
+              <div class="post-content">
+                <div class="post-tags">
+                  {post.data.tags.slice(0, 2).map((tag) => (
+                    <span class="tag">#{tag}</span>
+                  ))}
+                </div>
+                <h3 class="post-title">
+                  <a href={`/blog/${post.slug}`}>
+                    {post.data.title}
+                  </a>
+                </h3>
+                <p class="post-description">
+                  {post.data.description}
+                </p>
+                <div class="post-meta">
+                  <span class="date">
+                    {post.data.pubDate.toLocaleDateString('en-US', { 
+                      year: 'numeric', 
+                      month: 'short', 
+                      day: 'numeric' 
+                    })}
+                  </span>
+                  <a href={`/blog/${post.slug}`} class="read-more">
+                    Read More →
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="cta-section">
+        <div class="cta-content">
+          <h3 class="cta-title">
+            Ready to Optimize Your Azure Costs?
+          </h3>
+          <p class="cta-description">
+            Stop reading about it and start saving. Get a personalized Azure cost 
+            optimization strategy from our experts.
+          </p>
+          <a href="/#contact" class="btn-primary">
+            Schedule Free Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+/* Blog Index Styles - Homepage Design System */
+.blog-index {
+  padding: 80px 0;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.blog-index .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.blog-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.blog-nav {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+.nav-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #1d4ed8;
+}
+
+/* Featured Post Styles */
+.featured-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.featured-post {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.featured-post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Posts Grid - Same as Homepage */
+.posts-section {
+  margin-bottom: 4rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.post-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.post-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.post-title a {
+  color: #1f2937;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-title a:hover {
+  color: #2563eb;
+}
+
+.post-description {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.author {
+  font-weight: 500;
+}
+
+.date {
+  color: #6b7280;
+}
+
+.read-more {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.read-more:hover {  color: #1d4ed8;
+}
+
+/* Call to Action Section - Homepage Style */
+.cta-section {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .blog-index {
+    padding: 60px 0;
+  }
+  
+  .blog-index .container {
+    padding: 0 1rem;
+  }
+    .posts-grid {
+    gap: 1.5rem;
+  }
+  
+  .cta-section {
+    padding: 2rem 1rem;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+</style>
