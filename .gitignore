@@ -134,11 +134,6 @@ secrets.json
 .local/
 dev-data/
 
-# Documentation that might contain sensitive info
-docs/CREDENTIALS.md
-docs/SECRETS.md
-CREDENTIALS.md
-
 # TypeScript
 *.tsbuildinfo
 
