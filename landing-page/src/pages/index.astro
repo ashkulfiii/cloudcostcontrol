@@ -8,7 +8,9 @@ import Layout from '../layouts/Layout.astro';
 
 // Get latest blog posts
 const blogPosts = await getCollection('blog', ({ data }) => {
-  return !data.draft;
+  const now = new Date();
+  const pubDate = new Date(data.pubDate);
+  return !data.draft && pubDate <= now;
 });
 
 // Sort and get latest 3 posts

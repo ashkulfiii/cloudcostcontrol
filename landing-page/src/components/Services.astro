@@ -4,11 +4,35 @@
 
 <section id="services" class="services">
 	<div class="container">		<div class="section-header">
-			<h2>Our Azure Cost Optimization Services</h2>
-			<p>Comprehensive solutions designed specifically for finance teams who need clarity and control over their Azure cloud spending.</p>
+			<h2>Azure Cost Optimization Services</h2>
+			<p>Tiered solutions designed to reduce your Azure costs by 30-60% with guaranteed ROI and transparent pricing based on your cloud spend.</p>
+		</div>
+
+		<!-- Pricing Tiers -->
+		<div class="pricing-tiers">
+			<div class="tier-selector">
+				<button class="tier-btn active" data-tier="small">Small Business</button>
+				<button class="tier-btn" data-tier="midmarket">Mid-Market</button>
+				<button class="tier-btn" data-tier="enterprise">Enterprise</button>
+			</div>
+			<div class="tier-info">
+				<div class="tier-description active" data-tier="small">
+					<span class="tier-spend">Azure Spend: <strong>&lt;$5k/month</strong></span>
+					<span class="tier-team">Perfect for growing companies</span>
+				</div>
+				<div class="tier-description" data-tier="midmarket">
+					<span class="tier-spend">Azure Spend: <strong>$5k-$50k/month</strong></span>
+					<span class="tier-team">Ideal for established businesses</span>
+				</div>
+				<div class="tier-description" data-tier="enterprise">
+					<span class="tier-spend">Azure Spend: <strong>&gt;$50k/month</strong></span>
+					<span class="tier-team">Comprehensive enterprise solutions</span>
+				</div>
+			</div>
 		</div>
 
 		<div class="services-grid">
+			<!-- Cost Assessment Service -->
 			<div class="service-card featured">
 				<div class="service-header">
 					<div class="service-icon">
@@ -20,47 +44,75 @@
 					<div class="popular-badge">Most Popular</div>
 				</div>
 				<h3>Complete Cost Assessment</h3>
-				<p class="service-description">Full audit of your current Azure spending with detailed baseline establishment and optimization roadmap.</p>
+				<p class="service-description">Comprehensive audit of your Azure environment with detailed optimization roadmap and guaranteed savings identification.</p>
 				<ul class="service-features">
-					<li>Comprehensive spend analysis</li>
-					<li>Cost baseline establishment</li>
-					<li>Optimization recommendations</li>
-					<li>ROI projections</li>
-					<li>Implementation roadmap</li>
+					<li><strong>30-day deep-dive analysis</strong></li>
+					<li>Resource utilization audit</li>
+					<li>Cost optimization roadmap</li>
+					<li>ROI projections & guarantees</li>
+					<li>Implementation timeline</li>
+					<li>Executive presentation</li>
 				</ul>
 				<div class="service-pricing">
-					<span class="price">Starting at $2,500</span>
-					<span class="price-period">one-time</span>
-				</div>				<a href="#contact" class="service-cta primary">Get Started</a>
+					<div class="pricing-tier active" data-tier="small">
+						<span class="price">$2,500</span>
+						<span class="price-period">one-time</span>
+						<span class="price-guarantee">or 12% of year-1 savings</span>
+					</div>
+					<div class="pricing-tier" data-tier="midmarket">
+						<span class="price">$5,500</span>
+						<span class="price-period">one-time</span>
+						<span class="price-guarantee">or 15% of year-1 savings</span>
+					</div>
+					<div class="pricing-tier" data-tier="enterprise">
+						<span class="price">$12,500</span>
+						<span class="price-period">one-time</span>
+						<span class="price-guarantee">or 18% of year-1 savings</span>
+					</div>
+				</div>
+				<a href="#contact" class="service-cta primary">Get Started</a>
 			</div>
 
+			<!-- Managed Optimization Service -->
 			<div class="service-card">
 				<div class="service-header">
 					<div class="service-icon">
 						<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-							<path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 					</div>
 				</div>
-				<h3>Monthly Reporting</h3>
-				<p class="service-description">Detailed monthly reports with cost analysis, trend identification, and actionable recommendations.</p>
+				<h3>Managed Optimization</h3>
+				<p class="service-description">Ongoing cost management with proactive monitoring, monthly optimization, and dedicated success manager.</p>
 				<ul class="service-features">
-					<li>Monthly cost breakdown</li>
-					<li>Trend analysis</li>
-					<li>Budget vs actual reporting</li>
-					<li>Anomaly detection</li>
-					<li>Executive summaries</li>
+					<li><strong>24/7 cost monitoring</strong></li>
+					<li>Automated anomaly detection</li>
+					<li>Monthly optimization reviews</li>
+					<li>Reserved instance management</li>
+					<li>Quarterly business reviews</li>
+					<li>Dedicated success manager</li>
 				</ul>
 				<div class="service-pricing">
-					<span class="price">$800</span>
-					<span class="price-period">per month</span>
+					<div class="pricing-tier active" data-tier="small">
+						<span class="price">$895</span>
+						<span class="price-period">per month</span>
+						<span class="price-guarantee">Cancel anytime</span>
+					</div>
+					<div class="pricing-tier" data-tier="midmarket">
+						<span class="price">$2,250</span>
+						<span class="price-period">per month</span>
+						<span class="price-guarantee">12-month minimum</span>
+					</div>
+					<div class="pricing-tier" data-tier="enterprise">
+						<span class="price">$4,500</span>
+						<span class="price-period">per month</span>
+						<span class="price-guarantee">Annual contract</span>
+					</div>
 				</div>
 				<a href="#contact" class="service-cta">Get Started</a>
 			</div>
 
+			<!-- FinOps Framework Service -->
 			<div class="service-card">
 				<div class="service-header">
 					<div class="service-icon">
@@ -70,44 +122,77 @@
 						</svg>
 					</div>
 				</div>
-				<h3>Budget Framework Setup</h3>
-				<p class="service-description">Custom budgeting frameworks designed for your organization's cloud spending patterns.</p>
+				<h3>FinOps Framework Setup</h3>
+				<p class="service-description">Complete FinOps implementation with custom governance frameworks, automation tools, and team training.</p>
 				<ul class="service-features">
-					<li>Custom budget categories</li>
-					<li>Forecasting models</li>
-					<li>Alert thresholds</li>
-					<li>Approval workflows</li>
-					<li>Team training</li>
+					<li><strong>Custom FinOps framework</strong></li>
+					<li>Automated governance policies</li>
+					<li>Cost allocation & chargeback</li>
+					<li>Team training & certification</li>
+					<li>Dashboard & reporting setup</li>
+					<li>6-month support included</li>
 				</ul>
 				<div class="service-pricing">
-					<span class="price">$1,800</span>
-					<span class="price-period">one-time</span>
+					<div class="pricing-tier active" data-tier="small">
+						<span class="price">$3,500</span>
+						<span class="price-period">one-time</span>
+						<span class="price-guarantee">4-6 week delivery</span>
+					</div>
+					<div class="pricing-tier" data-tier="midmarket">
+						<span class="price">$7,500</span>
+						<span class="price-period">one-time</span>
+						<span class="price-guarantee">6-8 week delivery</span>
+					</div>
+					<div class="pricing-tier" data-tier="enterprise">
+						<span class="price">$15,000</span>
+						<span class="price-period">one-time</span>
+						<span class="price-guarantee">8-12 week delivery</span>
+					</div>
 				</div>
 				<a href="#contact" class="service-cta">Get Started</a>
 			</div>
 
-			<div class="service-card">
+			<!-- Emergency Response Service -->
+			<div class="service-card emergency">
 				<div class="service-header">
 					<div class="service-icon">
 						<svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg>
 					</div>
+					<div class="emergency-badge">🚨 Bill Shock?</div>
 				</div>
-				<h3>Ongoing Optimization</h3>
-				<p class="service-description">Continuous monitoring and optimization of your cloud resources for maximum cost efficiency.</p>
+				<h3>Emergency Cost Response</h3>
+				<p class="service-description">Immediate intervention for unexpected cost spikes with 48-hour response and emergency cost controls.</p>
 				<ul class="service-features">
-					<li>24/7 cost monitoring</li>
-					<li>Automated alerts</li>
-					<li>Quarterly reviews</li>
-					<li>Resource right-sizing</li>
-					<li>Reserved instance planning</li>
+					<li><strong>48-hour response time</strong></li>
+					<li>Emergency cost analysis</li>
+					<li>Immediate cost controls</li>
+					<li>Root cause identification</li>
+					<li>Prevention framework</li>
+					<li>Executive incident report</li>
 				</ul>
 				<div class="service-pricing">
-					<span class="price">$1,200</span>
-					<span class="price-period">per month</span>
+					<div class="pricing-tier active" data-tier="small">
+						<span class="price">$1,500</span>
+						<span class="price-period">flat fee</span>
+						<span class="price-guarantee">48-hour response</span>
+					</div>
+					<div class="pricing-tier" data-tier="midmarket">
+						<span class="price">$3,500</span>
+						<span class="price-period">flat fee</span>
+						<span class="price-guarantee">24-hour response</span>
+					</div>
+					<div class="pricing-tier" data-tier="enterprise">
+						<span class="price">$7,500</span>
+						<span class="price-period">flat fee</span>
+						<span class="price-guarantee">12-hour response</span>
+					</div>
 				</div>
-				<a href="#contact" class="service-cta">Get Started</a>
+				<a href="#contact" class="service-cta emergency">Get Emergency Help</a>
 			</div>
 		</div>
 
@@ -133,7 +218,7 @@
 
 	.section-header {
 		text-align: center;
-		margin-bottom: 80px;
+		margin-bottom: 60px;
 	}
 
 	.section-header h2 {
@@ -146,9 +231,77 @@
 	.section-header p {
 		font-size: 1.25rem;
 		color: #6b7280;
-		max-width: 600px;
+		max-width: 700px;
 		margin: 0 auto;
 	}
+
+	/* Pricing Tiers Selector */
+	.pricing-tiers {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.tier-selector {
+		display: inline-flex;
+		background: #f3f4f6;
+		border-radius: 12px;
+		padding: 4px;
+		margin-bottom: 20px;
+	}
+
+	.tier-btn {
+		background: transparent;
+		border: none;
+		padding: 12px 24px;
+		border-radius: 8px;
+		font-weight: 600;
+		color: #6b7280;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		font-size: 14px;
+	}
+
+	.tier-btn.active {
+		background: #2563eb;
+		color: white;
+		box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+	}
+
+	.tier-btn:hover:not(.active) {
+		color: #374151;
+	}
+
+	.tier-info {
+		height: 40px;
+		position: relative;
+	}
+
+	.tier-description {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.tier-description.active {
+		display: flex;
+		opacity: 1;
+	}
+
+	.tier-spend {
+		font-size: 16px;
+		color: #1f2937;
+	}
+
+	.tier-team {
+		font-size: 14px;
+		color: #6b7280;
+		font-style: italic;
+	}
+
+	/* Services Grid */
 	.services-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -177,6 +330,32 @@
 		border-color: #667eea;
 		border-width: 3px;
 		background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+	}
+
+	.service-card.emergency {
+		border-color: #ef4444;
+		background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(239, 68, 68, 0.05) 100%);
+	}
+
+	.emergency-badge {
+		background: #ef4444;
+		color: white;
+		padding: 4px 12px;
+		border-radius: 20px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.service-cta.emergency {
+		border-color: #ef4444;
+		color: #ef4444;
+	}
+
+	.service-cta.emergency:hover {
+		background: #ef4444;
+		color: white;
 	}
 
 	.service-header {
@@ -240,6 +419,22 @@
 	.service-pricing {
 		margin-bottom: 24px;
 		margin-top: auto;
+	}
+
+	.pricing-tier {
+		display: none;
+	}
+
+	.pricing-tier.active {
+		display: block;
+	}
+
+	.price-guarantee {
+		display: block;
+		color: #10b981;
+		font-size: 0.875rem;
+		font-weight: 500;
+		margin-top: 8px;
 	}
 
 	.price {
@@ -342,7 +537,33 @@
 
 		.section-header p {
 			font-size: 1.125rem;
-		}		.services-grid {
+		}
+
+		.pricing-tiers {
+			margin-bottom: 40px;
+		}
+
+		.tier-selector {
+			flex-direction: column;
+			gap: 4px;
+		}
+
+		.tier-btn {
+			padding: 16px 24px;
+			font-size: 16px;
+		}
+
+		.tier-info {
+			height: auto;
+			margin-top: 20px;
+		}
+
+		.tier-description {
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		.services-grid {
 			grid-template-columns: 1fr;
 			gap: 80px;
 			margin-bottom: 60px;
@@ -377,3 +598,45 @@
 		}
 	}
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		const tierButtons = document.querySelectorAll('.tier-btn');
+		const tierDescriptions = document.querySelectorAll('.tier-description');
+		const pricingTiers = document.querySelectorAll('.pricing-tier');
+
+		// Initialize - show small business tier by default
+		showTier('small');
+
+		tierButtons.forEach(button => {
+			button.addEventListener('click', function() {
+				const tier = this.getAttribute('data-tier');
+				
+				// Update button states
+				tierButtons.forEach(btn => btn.classList.remove('active'));
+				this.classList.add('active');
+				
+				// Show corresponding tier
+				showTier(tier);
+			});
+		});
+
+		function showTier(tierName) {
+			// Update descriptions
+			tierDescriptions.forEach(desc => {
+				desc.classList.remove('active');
+				if (desc.getAttribute('data-tier') === tierName) {
+					desc.classList.add('active');
+				}
+			});
+
+			// Update pricing
+			pricingTiers.forEach(pricing => {
+				pricing.classList.remove('active');
+				if (pricing.getAttribute('data-tier') === tierName) {
+					pricing.classList.add('active');
+				}
+			});
+		}
+	});
+</script>

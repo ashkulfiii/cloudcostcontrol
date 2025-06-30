@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
 const blogPosts = await getCollection('blog', ({ data }) => {
-  return !data.draft;
+  const now = new Date();
+  const pubDate = new Date(data.pubDate);
+  return !data.draft && pubDate <= now;
 });
 
 // Sort posts by publication date (newest first)

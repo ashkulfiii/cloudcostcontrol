@@ -15,3 +15,10 @@ DNS, Hosting, email forwarding to cloudcostcontrol@proton.me
 
 cloudcostcontrol@proton.me
 q7I!9^Y&cHJ2#cgPv
+
+
+## paved.com
+Newsletter advertising
+
+mikulas@cloudcostcontrol.net
+hzAUCulGmH3Jcu$c7

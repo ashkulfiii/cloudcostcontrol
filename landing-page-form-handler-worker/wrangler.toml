@@ -13,9 +13,9 @@ workers_dev = true
 name = "SEND_EMAIL"
 destination_address = "cloudcostcontrol@proton.me"
 
-# Routes (replace with your actual domain)
+# Routes for the form handler
 [[routes]]
-pattern = "cloudcostcontrol.net/api/contact"
+pattern = "cloudcostcontrol.net/api/form-handler"
 zone_name = "cloudcostcontrol.net"
 
 [observability.logs]

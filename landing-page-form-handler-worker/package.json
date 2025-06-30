@@ -16,9 +16,11 @@
     "form-handler"
   ],
   "author": "C³ - Cloud Cost Control",
-  "license": "MIT",  "devDependencies": {
-    "wrangler": "^3.0.0"
-  },  "dependencies": {
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.22.0"
+  },
+  "dependencies": {
     "mimetext": "3.0.27"
   }
 }

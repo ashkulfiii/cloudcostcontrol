@@ -10,9 +10,17 @@
 				<p class="contact-description">
 					Let's discuss how we can help your finance team gain clarity and control over your Azure spending. 
 					Get a free consultation and cost assessment to see exactly where you can optimize.
-				</p>
-				
-				<div class="contact-benefits">
+				</p>		// Helper function to reset button
+		function resetButton() {
+			submitBtn.disabled = false;
+			submitBtn.innerHTML = `
+				Get Your Free Cost Assessment
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M9 9L12 6L16 10L20 6L22 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			`;
+		}	<div class="contact-benefits">
 					<div class="benefit">
 						<div class="benefit-icon">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +55,7 @@
 					</a>
 				</div>
 			</div>			<div class="contact-form">
-				<form class="form" name="contact" method="POST" id="contact-form" action="https://cloudcost-control-form-handler.cloudcostcontrol.workers.dev/">
+				<form class="form" name="contact" method="POST" id="contact-form">
 					<!-- Honeypot field for spam protection -->
 					<div style="display: none;">
 						<label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -334,7 +342,7 @@
 		// Deploy the worker from ../landing-page-form-handler-worker first
 		// See: ../landing-page-form-handler-worker/CLOUDFLARE_SETUP.md
 		const WORKER_URL = 'https://cloudcost-control-form-handler.cloudcostcontrol.workers.dev/';
-		// Alternative: If you set up a custom route: '/api/form-handler'
+		// Alternative: If you set up a custom route: '/api/contact'
 		
 		// Basic form validation and submission
 		form.addEventListener('submit', async function(e) {

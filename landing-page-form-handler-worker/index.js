@@ -24,6 +24,7 @@ export default {
         company: formData.get('company') || 'Not specified',
         monthlySpend: formData.get('monthly-spend') || 'Not specified',
         service: formData.get('service') || 'Not specified',
+        urgency: formData.get('urgency') || 'Not specified',
         message: formData.get('message'),
         timestamp: new Date().toISOString(),
         ip: request.headers.get('CF-Connecting-IP')
@@ -87,6 +88,7 @@ async function sendEmailNotification(data, env) {
     console.log(`Company: ${data.company}`);
     console.log(`Monthly Spend: ${data.monthlySpend}`);
     console.log(`Service Interest: ${data.service}`);
+    console.log(`Urgency: ${data.urgency}`);
     console.log(`Message: ${data.message}`);
     console.log(`Submitted: ${data.timestamp}`);
     console.log('=====================================');
@@ -98,7 +100,7 @@ async function sendEmailNotification(data, env) {
     const msg = createMimeMessage();
     msg.setSender({ name: "C³ - Cloud Cost Control Website", addr: "noreply@cloudcostcontrol.net" });
     msg.setRecipient("cloudcostcontrol@proton.me");
-    msg.setSubject(`New Lead: ${data.name} from ${data.company}`);
+    msg.setSubject(`${getPriorityTag(data)} New Lead: ${data.name} from ${data.company}`);
     
     // Email body content
     const emailBody = `New C³ - Cloud Cost Control Contact Form Submission
@@ -108,6 +110,7 @@ Email: ${data.email}
 Company: ${data.company}
 Monthly Azure Spend: ${data.monthlySpend}
 Service Interest: ${data.service}
+Urgency: ${data.urgency}
 
 Message:
 ${data.message}
@@ -116,7 +119,10 @@ Submitted: ${data.timestamp}
 IP: ${data.ip}
 
 ---
-You can reply directly to ${data.email} to respond to ${data.name}.`;
+Priority Level: ${getPriorityLevel(data)}
+Suggested Response: ${getResponseSuggestion(data)}
+
+Reply directly to ${data.email} to respond to ${data.name}.`;
 
     msg.addMessage({
       contentType: 'text/plain',
@@ -142,12 +148,71 @@ You can reply directly to ${data.email} to respond to ${data.name}.`;
     console.log('=== EMAIL SEND FAILED - FORM SUBMISSION ===');
     console.log(`Name: ${data.name}`);
     console.log(`Email: ${data.email}`);
-    console.log(`Company: ${data.company}`);    console.log(`Message: ${data.message}`);
+    console.log(`Company: ${data.company}`);
+    console.log(`Monthly Spend: ${data.monthlySpend}`);
+    console.log(`Service Interest: ${data.service}`);
+    console.log(`Urgency: ${data.urgency}`);
+    console.log(`Message: ${data.message}`);
     console.log(`Error: ${error.message}`);
     console.log('==========================================');
     
     return false;
   }
+}
+
+// Helper function to determine priority level based on form data
+function getPriorityLevel(data) {
+  if (data.urgency === 'immediate' || data.service === 'emergency-response') {
+    return 'HIGH - Emergency Response Needed';
+  }
+  
+  if (data.monthlySpend === 'over-100k' || data.monthlySpend === '50k-100k') {
+    return 'HIGH - Enterprise Client';
+  }
+  
+  if (data.urgency === '1-month') {
+    return 'MEDIUM - Urgent Timeline';
+  }
+  
+  return 'NORMAL - Standard Timeline';
+}
+
+// Helper function to get priority tag for email subject
+function getPriorityTag(data) {
+  if (data.urgency === 'immediate' || data.service === 'emergency-response') {
+    return '[🚨 URGENT]';
+  }
+  
+  if (data.monthlySpend === 'over-100k' || data.monthlySpend === '50k-100k') {
+    return '[💎 ENTERPRISE]';
+  }
+  
+  if (data.urgency === '1-month') {
+    return '[⚡ PRIORITY]';
+  }
+  
+  return '[📧 LEAD]';
+}
+
+// Helper function to suggest response approach
+function getResponseSuggestion(data) {
+  if (data.urgency === 'immediate') {
+    return 'Immediate response required - Call within 2 hours';
+  }
+  
+  if (data.service === 'emergency-response') {
+    return 'Emergency service requested - Prioritize rapid response';
+  }
+  
+  if (data.monthlySpend === 'over-100k') {
+    return 'Enterprise prospect - Schedule executive consultation';
+  }
+  
+  if (data.urgency === '1-month') {
+    return 'Respond within 4 hours - Active buyer signal';
+  }
+  
+  return 'Standard 24-hour response timeline';
 }
 
 // Handle CORS preflight

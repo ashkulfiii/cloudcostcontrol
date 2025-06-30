@@ -9,28 +9,15 @@ workers_dev = true
 
 # Routes for custom domain
 [[routes]]
-pattern = "cloudcostcontrol.net/*"
+pattern = "cloudcostcontrol.net"
 zone_name = "cloudcostcontrol.net"
+custom_domain = true
 
 [[routes]]
-pattern = "www.cloudcostcontrol.net/*"
+pattern = "www.cloudcostcontrol.net"
 zone_name = "cloudcostcontrol.net"
+custom_domain = true
 
 # Static assets
 [site]
 bucket = "./dist"
-
-# Environment variables
-[vars]
-# Add any environment variables here if needed
-
-# Production environment
-[env.production]
-name = "cloudcost-control-landing-prod"
-routes = [
-  { pattern = "cloudcostcontrol.net", zone_name = "cloudcostcontrol.net", custom_domain = true },
-  { pattern = "www.cloudcostcontrol.net", zone_name = "cloudcostcontrol.net", custom_domain = true }
-]
-
-[env.production.vars]
-# Production-specific environment variables
